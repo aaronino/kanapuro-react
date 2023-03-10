@@ -25,8 +25,17 @@
 
 .mode-list, .game-list {
     list-style-type: none;
+    width: 100%;
 }
 
 .mode-list-item, .game-list-item {
     margin: 10px;
+}
+
+.menu-button {
+    width: 100%;
+}
+
+.menu-play-button {
+    width: 100%;
 }

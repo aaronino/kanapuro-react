@@ -8,7 +8,7 @@ type MenuButtonProps = {
 
 function MenuButton ({text, onSelect}: MenuButtonProps): JSX.Element {
     return (
-            <Button variant="outlined" size="large" onClick={onSelect}>
+            <Button className="menu-button" variant="outlined" size="large" onClick={onSelect}>
                 {text}
             </Button>
     )

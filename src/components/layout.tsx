@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import logo from '../images/logo-transparent.png';
+import { Container } from '@mui/material';
 
 const darkTheme = createTheme({
     palette: {
@@ -27,16 +28,18 @@ type LayoutProps = {
 export const Layout = ({children, subtitle = ""}: LayoutProps) => {
 	darkTheme.spacing(2);
     return (
-        <ThemeProvider theme={darkTheme}>
-            <CssBaseline />
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <h1>{subtitle}</h1>
-            </header>
-            <div className="App">
-                {children}
-            </div>
-        </ThemeProvider>
+        <Container>
+            <ThemeProvider theme={darkTheme}>
+                <CssBaseline />
+                <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo" />
+                    <h1>{subtitle}</h1>
+                </header>
+                <div className="App">
+                    {children}
+                </div>
+            </ThemeProvider>
+        </Container>
     );
 }
 

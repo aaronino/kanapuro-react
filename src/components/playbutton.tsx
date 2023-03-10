@@ -7,6 +7,6 @@ type PlayButtonProps = {
 
 export default function PlayButton({onClicked}: PlayButtonProps) {
     return (
-        <Button variant="outlined" size="large" startIcon={<PlayArrow />} onClick={onClicked} />
+        <Button className="menu-play-button" size="large" startIcon={<PlayArrow />} onClick={onClicked} />
     );
 }
