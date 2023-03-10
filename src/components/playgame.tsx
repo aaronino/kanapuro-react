@@ -1,21 +1,35 @@
-import { Game } from '../data/games';
+import { Game, GameCode } from '../data/games';
+import { PathCharacters, PathCharacter } from '../data/data';
+import DictionaryGame from './games/dictionarygame';
+import IdentifyGame from './games/identification';
 
-
-
-export default function PlayGame({game}: {game: Game}) {
+export default function PlayGame({game, gameOver}: {game: Game, gameOver: any}) {
+    let validCharacters: PathCharacter[] = PathCharacters;
     let body:React.ReactNode = null;
 
+    // todo this component needs path, we can use that to figure out which languages
+    // todo we need PlayerProgress of some kind here as well so we can pass only appropriate tiles, we can put that off for a while
 
-    if (game.name === "Dictionary") {
-        body = <h1>Show dictionary component</h1>;
+
+    switch (game.code) {
+        case GameCode.Dictionary:
+            body =
+            <>
+                <DictionaryGame chars={validCharacters} onGameOver={gameOver} />
+            </>;
+            break;
+        case GameCode.Identify:
+            body =
+            <>
+                <IdentifyGame chars={validCharacters} onGameOver={gameOver} />
+            </>;
+            break;
     }
 
 
     return (
         <>
-            <h1>Finally we're playing game {game.name}</h1>
             {body}
-            <h1>Todo - just show a bunch of tile data here to prove it's accessible</h1>
         </>
     )
 }

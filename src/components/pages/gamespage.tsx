@@ -12,9 +12,14 @@ function GamesPage() {
         setIsPlaying(true);
     }
 
+    function gameOver() {
+        // todo we need to show a score screen here normally
+        setIsPlaying(false);
+    }
+
     return (
         <>
-            { isPlaying ? <PlayGame game={activeGame} /> : <GameList chooseGame={chooseGame} /> }
+            { isPlaying ? <PlayGame game={activeGame} gameOver={gameOver} /> : <GameList chooseGame={chooseGame} /> }
         </>
     );
 }

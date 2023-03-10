@@ -1,4 +1,3 @@
-import logo from '../../images/logo-transparent.png';
 import MenuButton from "../menubutton";
 import PlayButton from '../playbutton';
 import { Card } from '@mui/material';

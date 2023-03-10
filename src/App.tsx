@@ -3,7 +3,7 @@ import './App.css';
 import TitlePage from './components/pages/titlepage';
 import ModePage from './components/pages/modepage';
 import Layout from './components/layout';
-import { useState, Fragment } from 'react';
+import { useState } from 'react';
 import { PathContext } from './context/PathContext';
 import {Paths } from './data/data'
 import GamesPage from './components/pages/gamespage';
@@ -12,7 +12,7 @@ import GamesPage from './components/pages/gamespage';
 type Pages = "title" | "mode" | "game";
 
 export default function App() {
-	const [page, setPage] = useState("title"); // todo use a reducer for this
+	const [page, setPage] = useState<Pages>("title"); // todo use a reducer for this
     const [path, setPath] = useState(Paths[0]);
     const pathValue = { path, setPath };
 

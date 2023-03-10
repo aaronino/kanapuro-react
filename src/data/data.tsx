@@ -1,7 +1,7 @@
 export enum Language {
-    English,
-    Hiragana,
-    Katakana
+    english,
+    hiragana,
+    katakana
 }
 
 export interface Path {
@@ -15,22 +15,22 @@ export interface Path {
 export const Paths: Path[] = [
     {
         id: 1,
-        base_language: Language.English,
-        learn_language: Language.Hiragana,
+        base_language: Language.english,
+        learn_language: Language.hiragana,
         button_text: "あ / a Learn Hiragana",
         description: "Learn Hiragana - a great starting point for all beginning Japanese learners. Hiragana is an alphabet-like set of characters used for writing Japanese words."
     },
     {
         id: 2,
-        base_language: Language.English,
-        learn_language: Language.Katakana,
+        base_language: Language.english,
+        learn_language: Language.katakana,
         button_text: "ア / a Learn Katakana",
         description: "Learn Katakana - most students progress to Katakana after learning Hiragana. Katakana is an alphabet-like set of characters used for writing non-Japanese words."
     },
     {
         id: 3,
-        base_language: Language.Hiragana,
-        learn_language: Language.Katakana,
+        base_language: Language.hiragana,
+        learn_language: Language.katakana,
         button_text: "あ / ア Blend Hiragana and Katakana",
         description: "Blend Hiragana and Katakana - once you feel competent in both Hiragana and Katakana, challenge yourself by practicing them both at once."
     },
